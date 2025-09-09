@@ -1,9 +1,9 @@
 import React from "react";
 
-const page = ({ params }) => {
+const page = () => {
   return (
     <div>
-      <h4>User Info Is: {params.userId}</h4>
+      <h1>This Page Is Student Info</h1>
     </div>
   );
 };

@@ -1,11 +1,7 @@
 import React from "react";
 
 const page = ({ params }) => {
-  return (
-    <div>
-      <h4>User Info Is: {params.userId}</h4>
-    </div>
-  );
+  return <div>Student Name From Dynamic URL: {params.student}</div>;
 };
 
 export default page;
