@@ -1,3 +1,4 @@
+import { title } from "process";
 import React from "react";
 
 const page = () => {
@@ -9,3 +10,10 @@ const page = () => {
 };
 
 export default page;
+
+export function generateMetadata() {
+  return {
+    title: "Hello Developer Mamma",
+    description: "This Is Developer Website ",
+  };
+}

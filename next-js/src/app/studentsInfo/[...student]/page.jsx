@@ -1,3 +1,4 @@
+import { title } from "process";
 import React from "react";
 
 const page = ({ params }) => {
@@ -5,3 +6,9 @@ const page = ({ params }) => {
 };
 
 export default page;
+
+export function generateMetadata({ params }) {
+  return {
+    title: ` Hey Mamma ${params.student}`,
+  };
+}
