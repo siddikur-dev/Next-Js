@@ -1,9 +1,15 @@
 import { NextResponse } from "next/server";
 
 export function middleware(request) {
+  // যদি ইতিমধ্যেই SignUp এ থাকে তাহলে কিছু করব না
+  if (request.nextUrl.pathname.startsWith("/SignUp")) {
+    return NextResponse.next();
+  }
+
+  // class রাউটে গেলে SignUp এ পাঠাবে
   return NextResponse.redirect(new URL("/SignUp", request.url));
 }
 
 export const config = {
-  matcher: ["/userinfo/:path*"], // /userinfo বা এর ভেতরের সব path redirect হবে
+  matcher: ["/class/:path*"], // কোলন ছাড়া
 };
