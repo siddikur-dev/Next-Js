@@ -1,5 +1,6 @@
 "use client";
-import State from "./state";
+import Link from "next/link";
+// import State from "./state";
 export default function Home() {
   const alertFun = () => {
     alert("Hey this is Next Js");
@@ -7,7 +8,8 @@ export default function Home() {
   return (
     <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
       <button onClick={alertFun}>Show Alert</button>
-      <State></State>
+      {/* <State></State> */}
+      
     </main>
   );
 }
